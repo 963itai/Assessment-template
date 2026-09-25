@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>963ITAI — AI Governance Readiness Assessment Questionnaire</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#152057;--navy-dark:#0E1740;--navy-light:#1E2D6F;
+  --blue:#2546BD;--blue-light:#3B5FD9;
+  --blue-bg:rgba(21,32,87,0.04);--blue-bg2:rgba(21,32,87,0.07);
+  --icon-bg:#1B2A6B;
+  --white:#FFFFFF;--off-white:#F8F9FC;--light-gray:#F1F3F8;
+  --border:#E2E6EF;--border-card:#DDE1EC;
+  --text-primary:#152057;--text-body:#4A5568;--text-muted:#8892A8;--text-light:#6B7694;
+  --success:#22C55E;--warning:#F59E0B;--error:#EF4444;
+  --radius:16px;--radius-sm:12px;--radius-xs:8px;
+  --shadow:0 1px 3px rgba(21,32,87,0.06),0 1px 2px rgba(21,32,87,0.04);
+  --shadow-md:0 4px 12px rgba(21,32,87,0.08),0 2px 4px rgba(21,32,87,0.04);
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --font-mono:'SF Mono',Consolas,'Liberation Mono',Menlo,monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--off-white);color:var(--text-body);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}
+
+/* ─── Header ─── */
+.header{
+  background:var(--white);border-bottom:1px solid var(--border);
+  padding:20px 40px;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;backdrop-filter:blur(20px);
+  background:rgba(255,255,255,0.92);
+}
+.header-left{display:flex;align-items:center;gap:16px}
+.header-left img{height:40px}
+.header-left .divider{width:1px;height:28px;background:var(--border)}
+.header-left h1{font-size:16px;font-weight:700;color:var(--navy)}
+.header-right{display:flex;gap:10px;align-items:center}
+.btn-sm{
+  padding:8px 18px;border-radius:100px;font-size:13px;font-weight:600;
+  border:none;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px;
+}
+.btn-outline{background:transparent;border:1.5px solid var(--border-card);color:var(--navy)}
+.btn-outline:hover{border-color:var(--navy);background:var(--blue-bg)}
+.btn-fill{background:var(--navy);color:#fff}
+.btn-fill:hover{background:var(--navy-dark)}
+
+/* ─── Progress Bar ─── */
+.progress-bar{
+  background:var(--white);border-bottom:1px solid var(--border);
+  padding:16px 40px;
+}
+.progress-track{height:6px;background:var(--light-gray);border-radius:100px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-light));border-radius:100px;transition:width .4s ease;width:0%}
+.progress-info{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;font-weight:600}
+.progress-info .pct{color:var(--blue)}
+.progress-info .count{color:var(--text-muted)}
+
+/* ─── Layout ─── */
+.container{max-width:960px;margin:0 auto;padding:32px 24px 80px}
+
+/* ─── Intro ─── */
+.intro{
+  background:var(--white);border:1px solid var(--border-card);
+  border-radius:var(--radius);padding:32px;margin-bottom:32px;
+}
+.intro h2{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:8px}
+.intro p{font-size:14.5px;color:var(--text-body);line-height:1.7}
+.intro .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.intro .tag{
+  font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;
+  background:var(--blue-bg);color:var(--blue);padding:4px 12px;border-radius:100px;
+}
+
+/* ─── Domain Sections ─── */
+.domain-section{margin-bottom:32px}
+.domain-header{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:20px;padding:0 4px;
+  cursor:pointer;
+}
+.domain-num{
+  width:42px;height:42px;border-radius:var(--radius-sm);
+  background:var(--icon-bg);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:15px;font-family:var(--font-mono);flex-shrink:0;
+}
+.domain-info h3{font-size:18px;font-weight:700;color:var(--navy)}
+.domain-info .domain-tag{
+  font-size:10.5px;color:var(--blue);font-weight:700;
+  text-transform:uppercase;letter-spacing:0.06em;
+}
+.domain-info .domain-count{font-size:12px;color:var(--text-muted);margin-left:8px}
+
+/* ─── Question Cards ─── */
+.q-card{
+  background:var(--white);border:1px solid var(--border-card);
+  border-radius:var(--radius);padding:24px 28px;margin-bottom:12px;
+  transition:all .2s;
+}
+.q-card:hover{border-color:var(--blue-light);box-shadow:var(--shadow)}
+.q-card.answered{border-left:4px solid var(--success)}
+.q-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:14px}
+.q-num{
+  font-size:11px;font-weight:700;color:var(--text-muted);
+  font-family:var(--font-mono);flex-shrink:0;
+}
+.q-text{font-size:15px;font-weight:600;color:var(--navy);flex:1}
+.q-context{
+  font-size:13px;color:var(--text-muted);line-height:1.6;
+  margin-bottom:16px;padding-left:52px;
+  font-style:italic;
+}
+
+/* ─── Maturity Scale Selector ─── */
+.maturity-selector{
+  display:flex;gap:6px;padding-left:52px;flex-wrap:wrap;
+}
+.mat-option{
+  flex:1;min-width:140px;padding:12px 14px;
+  border:1.5px solid var(--border-card);border-radius:var(--radius-xs);
+  cursor:pointer;transition:all .2s;text-align:center;
+  background:var(--white);
+}
+.mat-option:hover{border-color:var(--blue);background:var(--blue-bg)}
+.mat-option.selected{border-color:var(--blue);background:rgba(37,70,189,0.08);box-shadow:0 0 0 1px var(--blue)}
+.mat-option .mat-num{
+  font-size:20px;font-weight:800;color:var(--navy);
+  font-family:var(--font-mono);display:block;
+}
+.mat-option.selected .mat-num{color:var(--blue)}
+.mat-option .mat-label{font-size:11px;font-weight:700;color:var(--navy);display:block;margin:2px 0}
+.mat-option .mat-desc{font-size:10.5px;color:var(--text-muted);line-height:1.4;display:block}
+
+/* ─── Notes Field ─── */
+.notes-area{
+  margin-top:12px;padding-left:52px;
+}
+.notes-toggle{
+  font-size:12px;font-weight:600;color:var(--blue);cursor:pointer;
+  display:inline-flex;align-items:center;gap:4px;
+  padding:4px 0;
+}
+.notes-toggle:hover{color:var(--navy)}
+.notes-field{
+  display:none;margin-top:8px;
+}
+.notes-field.show{display:block}
+.notes-field textarea{
+  width:100%;min-height:80px;padding:12px;
+  border:1.5px solid var(--border-card);border-radius:var(--radius-xs);
+  font-family:var(--font);font-size:13px;color:var(--text-body);
+  resize:vertical;outline:none;transition:border-color .2s;
+}
+.notes-field textarea:focus{border-color:var(--blue)}
+.notes-field textarea::placeholder{color:var(--text-muted)}
+
+/* ─── Follow-up Questions ─── */
+.followups{
+  margin-top:12px;padding-left:52px;
+}
+.followup-toggle{
+  font-size:12px;font-weight:600;color:var(--text-muted);cursor:pointer;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 0;
+}
+.followup-toggle:hover{color:var(--navy)}
+.followup-list{
+  display:none;margin-top:8px;padding:12px 16px;
+  background:var(--off-white);border-radius:var(--radius-xs);
+  border:1px solid var(--border);
+}
+.followup-list.show{display:block}
+.followup-list li{
+  font-size:13px;color:var(--text-body);padding:4px 0;
+  list-style:none;display:flex;gap:8px;align-items:flex-start;
+}
+.followup-list li::before{
+  content:'\f054';font-family:'Font Awesome 6 Free';font-weight:900;
+  color:var(--blue);font-size:8px;margin-top:6px;flex-shrink:0;
+}
+
+/* ─── Summary Panel ─── */
+.summary-panel{
+  background:var(--white);border:1px solid var(--border-card);
+  border-radius:var(--radius);padding:28px;margin-top:40px;
+}
+.summary-panel h3{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.summary-domain{
+  padding:16px;border:1px solid var(--border);border-radius:var(--radius-xs);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.summary-domain .sd-name{font-size:13px;font-weight:600;color:var(--navy)}
+.summary-domain .sd-score{
+  font-size:20px;font-weight:800;color:var(--blue);font-family:var(--font-mono);
+}
+.summary-domain .sd-score.na{color:var(--text-muted);font-size:13px;font-weight:600}
+.overall-score{
+  text-align:center;margin-top:20px;padding:24px;
+  background:var(--blue-bg);border-radius:var(--radius-sm);
+}
+.overall-score .big-num{font-size:48px;font-weight:800;color:var(--navy);font-family:var(--font-mono)}
+.overall-score .label{font-size:13px;font-weight:600;color:var(--text-muted);margin-top:4px}
+
+/* ─── Footer ─── */
+.footer{
+  text-align:center;padding:32px 24px;margin-top:40px;
+  border-top:1px solid var(--border);font-size:12px;color:var(--text-muted);
+}
+.footer strong{color:var(--navy)}
+
+/* ─── Print ─── */
+@media print{
+  .header,.progress-bar{position:static}
+  .btn-sm,.notes-toggle,.followup-toggle{display:none}
+  .notes-field,.followup-list{display:block!important}
+  .q-card{break-inside:avoid}
+  body{background:#fff}
+}
+
+/* ─── Responsive ─── */
+@media(max-width:768px){
+  .header{padding:12px 16px;flex-wrap:wrap;gap:12px}
+  .container{padding:16px 12px 60px}
+  .maturity-selector{padding-left:0;flex-direction:column}
+  .q-context,.notes-area,.followups{padding-left:0}
+  .mat-option{min-width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-left">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAABgCAYAAAA91g0nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAACqASURBVHhe7Z13eFRV/offc9uUVEIH6R2x0RVFQDoIqCioFLussHZcFcS+P9uiKCuuytpZC3ZBUao0aSKiFKnSEUJInXLL+f1xZ5LJZBJCC+rj+zwnuXP6+X7uKbeLgpApiaekz1/8CVDiPf7iz0tJsf/q1X9aiov9l9B/aorE/kvoPz2iIGTKv4Q+dVSE6UXkv1Ihpf1FQirK9NFySi7Q/qJCqCiho8i/xD41VLTQUf4Su4I5VUJTkWI7EuSpbOkpRiYQWlawTSpE7PwCWLfFxrLBcSLCxxjgaN3vmfi6JqqzlODYEtuGX3aYZOfFRThJiIJggnPjJxBHQjAouerhELWrq1x2AZzTVCUlSUGJ7GoiemxwDBxH0hNGeQwopQQEjgO5BQ5rNjt8vMBm406L6Y/58XlBOR5DlIMK6NkSXYf2rRTenxPkhieCDB2XzcI1NpYlkY7EsZ0EfSHeJSY+1qlwR8KxJdIRWBbM/97kygdyuf6JMNNmFXBOEwNDVxAVsNue1J4dPVtj27B2k8mwJyzGXSXZskvlq5UGlVNMhnZz6NbWQ/UMUWi40nfwUgN+d8TOxfsPOcxdYfHeHElmjqBne2hRz+ahqYIXx2p0OktDU2NTnxxOmtiSyMQcabgj4bL7c+nVycc1PVVsRzB9boDn3tNA0bhlkM3QnhpJPhDIxEOaKPzzuyba3pxch7dnmfx3lo5HU7nzcpO+52koiuR/X4d47fMQ86akoqmijB38xHFSxHbnp+I4UvLlUpOnpwW44Gwfl3fTaVoHDmYJvlpm8fkSSV6+Sbc2Chef76F5fYGuutLKeIkrwjJHQWQ6BglhS7J+m8nM72DuSpPqGR76dpR0b6+RlizYutvmw3k23ywNccvlGld096IoFdOeEya2LP4nIZYj2bbH4dHXTJZuSOKangFuHmSQ7Hd3kG9XW4x/qYDDBT4GnRdi9JBkMlIFPo9AIFGVWJ3FKe/k7qoaJIJA2OFAls2/puUze7WXxjVDPHRdEmc0UUFK8gPw6mcmb8z20fK0fCZcp9OygRrXppPLcYtdmPgIQkeREsImrNxg8foMkw07oWcHg2E9oV4NlWAYvl0V5pNFKot+kijCoV9Hm0u76JzdVEONLCndzhCxUgUZi8ioJSPLKdOG1RstPp5vMm+NB9sK0bO9zsWdHNq11FEVwaYdFm/Pcpi1NMBZzXwM76XS/nQFQ6+YoTuW4xK7SOijy8JxwHbc7R+32jz2pmT9Nsm1fSQj+xlUSpIoCmzbbTPx3SDzvlfICTpccJbG7Vd4OaMRJHnduV2IuAOKk2hAKd265wUkqzY6THovnxUbHKqkaFxxkc5Ngwwy0gSWLcnMlrzyUZD3Fhic2UBy70iFVg3dVZiqRnfWiuWYxS5KVLQQKw9Swq97JaYtqVdDASQFIcnqjQ5vzZJsO2DQ/SyT4X0UalZWCJuSddttrp5wmLCtUyVdUruqj/6dJJd18ZCSRGQojDt4Kf3HUeFEJmTLkhzIEkz7Kps5P/rYcyBE5mFB7SohXrs/lYanuaPOtt02b3xpsnCtQct6NsN6KpzZRMXncaedLTtNvIZC/Vpqhfdsddz4CQ/Fex6JYxWayDC4eqPNsEcKyA2o1KosSE8RNKyl0O88hbqVTT5eGGbqJ2FQNWpXlXz7fZC5qyx03abeaV5qVoZZK3Te/DKEaUPlVIHHcIdFRSkSXRZby5Vt2ejgFI0vJVi2pCAA2/bavDJD8uBbCnsyBR2amliWQ2aWRXZQp31LhSSPwtQvTB5724OmCh68Dq7pq1GnhorjwPa9Di994jBuSh4dz/DQqLZS4WIfdc8+HqEBHEeyfR9cMi5M49o2O37T6dhC4bYrVOrXcLPNCzr8tMXhuffDbN0rycmzadNc456rdd6dLZj/o0Kz0/Lofo6HpT/ZLN1g0La5yrCekk5nKuiRYdK03QqqAhRVJBRcRs5P5+Q5JCcJd2UsoSAo+WJxkA9mO2z+zU+vDpLe7SQzF4ZZuM6gbROTEX0ED0yFnXtzMAwfHVqq3DBAp0V9Fb9XICV8vyHMfz62+OlXg7q1QmzervDhPw3q11QqbBUe5ah6djGhjwNNlXy3XqVPB4fRgzRWb5Y8+36ILbuhdhWFqumCBrVUBl1osHitxa4DBs/epnFmI40e7VQ6tjD5fp3NO7NNzmvtYUQvwW+ZNv/9UrB4TYi2zTWSfIIdeyUT37Np21LF0NxqCyEKT12C23u/32Az5aMgXVrrmDbMXx3mrskqK7cYnNsiwH3DNYJBk8em5mP4PEy4RnDdxTq1q6nghJm5QmVEH50n/uajVhWB5cDaTQ6PvGbzymeCZvUkD1+nUVBg4Qidod1VdN2tS0VS7p5dQuhypUqMacFz7xWwbrfC83/3oArYc9Dmo4UKHy42OKehye2Xw8qfA4z7D9RIyyctLY3bhwguaqshhMC0HH7dD5M/DLB4ncHgLjaXdzZ45n2Trfs8TL3bQUqHqx4O0qaRzRN/T8FrKFg2BEISv1egKoL9h2wG/yObS7t5GD3Yz7uzbSa9H+Le4ToXnq3zxZIQb3zjpXGNIKMGqZzeUMWjC1QFNm63eWyaxvpNhwnIFN6+XxIMC16cbrFpj4ehF5lc2kWlZmVBICS56SmLPu0sRvT3YWgVKzRHL/bxCw3uSnzLLovbJkvOaSS5optG87oCVRVs2yt5/SuH+auD7N4fok0Tg0l3JjF3VZhPF+pUSw9xdQ+N1s11vIZ7+LNwjcX4120u7SQY2VvlgalhDucK7rhC5fHXwxzIshh8kUFWNiz6wUQoKulpgh6t4avvQvy43WDi3zV+y4Rpsy0euclDm2YqL34YYsYyye1DvPRpr+Az3JFgy06br5YJVm1RGHBemJZ1VYY9mkcoaFKjWiUuPNtmZB+dOtUVLFuy9pcw//tGsH4HvHKfQq2qKmoFD+GUV+xiQsdtHiuOA7t+c5j6eZAvVvrpfmaIO68yqJzqHrr8vM2mz93ZpKYkM7KHyc2X+lCkYPbyEC9MVzijkc6To8HnVbAsyUNTA8xebvPVpCRURTB6osnW/ZKsQwWEQgYFYZPBXT3cOthDqh/WbHG4f0ouezMBReWSzjbfbfTz6l0qZzbVWf5TkGGPSh6+UXJFVx+G7o4mj74SYtU6yfWDVS5qY1AQdHjuPZP35tikJTl8+lQSdaq5O+6BLMnj/w0yf7XDVT1VRvTVqVVNPSWHXZR/zj6xQhNZ9ab4BV3a6JzXwmHpeo1/Tw+Tm2dSt7pCtUoKM76zGdJVsGOfzuT388kPq/TsoDOyr8qhbMlrM0LY0qYgKHj9C4d/3arRvJ7Otr2SDi3gtU8LsGwPL9ylk54i2H1Y5Zo+GpXSFLbuNlnyk+TFu/0cynH4conDE6M0kFApTaF+TZX1W0Ns3iXp2kbns0UOj78Zpk0Lg/E3GHgNhVc+c3h6WoBUv4qmBKhfO4WruivsybR59bMwj74hqZFu8ORojUFdNFL9yikTmvL07GL3GZcZ89iInqgwbcn23Ta3PZvJ/rwMbrtcMmc1pBn5PHFLOodyYMJ/8vl+m86InibX9/dhaAqT3jvMKzMzuGmQzR2DBe/PNcnMk/y6PZ9l6w3GXuXhjCYaNasp9LsnnxsHaPRup9F5VD43DPAw5gqdzGzofds+xgyphOE1+PYHk5fuMMjJd+h+WwF+n5chXS1G9vORk+sw8e1cZq320bmVw/jrPVg2XPmw4IquAQxV5cWPFepm5PLcXenUrwWaKlAVWeELsnjK2bNPIsL940hJ1Uoql3X1UauKw0ffaqz46TD5IR8Xd9KoWVmh//karRtLVm8y2L5XkpUbJtWnsvAHGDdCYNqClz40GT1YZ/J0g0susLjmYi95BeDxSKQDz75vUhAI89NOP+NHqBw8JKlVTUFXDSxbQ1UsVm5wOJgJHc9QOZhlsXV/iJv6e1mxUTLxbahf28vYqyTXDtBJ8gp+3GTx5ufZbN4uyQ0n8ffBkvHX+6lWWSCEQFFAUPGnR+Mp8+aFiujV0oFps0y+WBgiGJJ4DJWB5xu8NU5w91A/h3IUbnrCZOlPFrZUaH+6zmM3qYzsq/LZtxZ3vaBxwZkBGtUSPPe/PM47UyE/zyE/IOnaPgUpBAVBhzc/DXL+GQqBsMKk90P0a1tAKGjy9mfZeHTodKbOWY0FP24o4O+XKny8CHLzode5Bjv2pzLiUdiwPcjUCRr3XSs4p7lO2FSYsdjknskBkpP93DrU4M0HJAMuUDF0CITgyyVh5i63C9t7KilT7JNNdE9PSYLRz0LfexymfBTiwGEHjy64eZCPGc/oXHCWw13PF3D1gxZfLLGxbEmKX/DiPSk0byQYc0Uyuw/CN8sC1KvuYEtodlouzetLFCFpUlchM0ch2a9yTuMQyUk6tw5J5ru1JtdelgRA8/oCr2ry0y8WDWsIamaE+XxhgCa1VWqk5nPtxXD/iCRS/Q65BfDaFyEG3it55l0Y2c9gzmQPI/u5h1QHsxxe+ijIoHscbntWwTDcbvO77dkVtRNKoEV9SfVqgr4dg7w7X2HgfSb/+TTIgcOSutUUxg7zMeNfyTSuazF2is7gcUEW/WCRledw4MAhmtcVrN4QJjM/hU17VapnKORaGfx3RoD8EOia4MGbDKpXlozomUy7ZqlUrQQDu/hodJpB2JJs/NXhrudCtG6uULu6Rl6+zXtf5+P1KLRrprA/S+FgtsM7s2y63hJg0nSV3m1CzHzaYNSlHqqmw95DNq98ajPgXotpswKc3SRAlcoqTeqoFWjR0iljzj65Q3gUAfi9Ct8sD1OvhsZTfzNoWMtm1nKH12bC/oMWjWorVE5Xuai1SnZ2Hms357NorcKnizU0DUb08fDNijB5wRBhy0ua32TW8mzWbIFvVvvIzgtTNV0hPUmhVlWwQ5IzmgiCFnyz3Ob5D2xe/SJMfkEBNarohC1Ytw32ZxsM6qyTG7R5b7bFjGUq328o4GCWyWM3GYzsZ6BrsOcATHo3zPMfWIQtGH2pxp1X+flxo41PDzD4Ig+a8jufsysCIdyeN+h8yfebdHwG9O7g4eV7/Nw9RGP+9zZXjMvl9RkB9mVKmtfTSE7yMPU+P2c3cfB4dRwpySmAGukwZpDD/70VJiNV44PHUkjzBpj0gc3Aewq4dVI+P252aN1KMukDm8vuN5n4vsa8VTaP3ODhHyNSmb1M5aslYcZereLz+wiEHHwGmLbDsG42z9ziJz09hQY1BDv3O0z5OMyQCfms2aLy0PU+nrtdp1sbBb8Hft7p4apePneBdoqFpjSxT2JHToimwoDz/azdZvLKjDCHcx10DXp1VJj+Tx+PjfKzcK3KVY/DnNUmew/7KQjb3HY55GfnIyLn201LcFZTg79d5uNwDmTn2vTtYPC/CTpPj/GwfJ3C1Y+EufpRk6f/Z9O5tWDaBMnUe72c1Uhh0cogjep4eGJMKpYjsEL5+DwKO/ZadG/nZ0Rfg9Wbw4Qth9e/DDPsUZvNO1Wev8PLu48odGwl0VU4nCeZ8lEeW3bm0/EMA039HShd9jAeoYKU93oEqV7J9IWCabNMTEejWqpD1Uoq9Wq4lz8b1bCYv0qwbVceVTIE3c7xMn+NRrtWKodzFeb+6GdwZ5uGtTRW/uJh8gdBDuWEWLXR5s2ZYerX8PL87Qojeyu0aSZ5fYbC5wtzmLO8gDdmWmQH0rnzyhCtGuvMXaWw/7DCpV1UJr4vuLyboEFNwaR3TX7dlc9p1VN48FrBiL4qp1VVUDWF7bsdps12eOg1wY79BrcNUWnVUPwuDrso7aTKyT7kSoSM3HKclWvz42aFlz4MsOuAw/ln2fztsmTqVNNAujc6fL44zNRvND54QGHLbof3v7YY0d9g+GMhJt8u6NjKIK9AsvcgLFgT5vFX8tAUk5YNVIJGdXw+gRnMIisryOat0L2Tnwkj/VTNUKmS7h4i9bszh5su81I7A/4zA168Q2fBDxYTp0leuF2lbi0VQ3XnoV/32jz/bj7LNnhoVheuH6DTqqEgLQUiUX4XlC12iZCTj4zchhsKS+asCDL9W43NO6FfJ43e7W2a13NXtmMmhtGUEE+OTmX7HocGtVX++WYe2QEvE29RMXTBrgM2V07Ip3aGYNc+k3qn+ehzrk2dajorN4b5bInKaVXCbNxucEN/h+sHuufVp80KMu0bhfceN9i5x6ZubcHhXMmQ+wsYc4WPIT1UgiFYt8Vi5nKVuStsmtaBYT0VzjvbPcZWfkciR0kgdky/PgVix+JISTAEv+xwmDw9zHfrFTqdXsC4a1I5mANXPqwxrJfJvVdpCCQHD0uGPGjT/ZwAdw1P4eVPAsxbZdP3XJWQMOhylsJLn5jszdIZfIFJ+2YqNz6dx9mNBHO/F3zwqJ/cfMnNT8D919kMuMCLooBlSUY9FeLQYZPXHkhm137JP18L8uN2Lz06WNw8QKNBbYFHc8+W/V4pIfapGMLLwonUwTQl3/8S5p2vbRb/JOnWVqV+dcmk9y1GX+rlhovdS55L1wYZO0Wn33kmC1aZ9GyvsvIXmzuu8PLg6yan1xPUTDeZvTaFC8826XaGw9Pv5LJxj8LA830sWS259ELJmKHJCODgYYeJ/wuxbB3ceaXKx/NV1m626d5eMqyXh6b1IvfAcerPfR+J373YUSRgW+618APZDk+9nc+MZWnkB3Oxw5KxV/u49XIFTRVs328z/OEctu8MkZxaiQeug0/nBmnVxMN9wz0oAjJzHS4fl830x9MZ/x+LWQv3YUsPz9yRweXddBRFEjbh7hdsPvwmB6/fg5Hk59oeQUZd5ifZJxEiKvQfg7hBp+LVleV0AtA0MHSoVUXhqdHJvPegyYgeUDU9wOQPcvjHiya7fpPUq6Yy5e4kKmek0qCaQo+2BqiCNL+NrkavQglUoWLagv6dbNIrpXHNxckM6qwB8MuvcM0juXy64DD1aqmMudzLzCfhrqu9pCdJNAW0P5DQlBS7YjmaXSsaVwj3ZkKvITi7qcL//S2JJS9XYWjPZD5erDH0QZOl623qVNfx6TlUT8snIwVuGeRn0UYfWXkQMiWPvFxA6yY+qqRKgkGLrJwgLRspOMAXS0wuuc/kx60exl2byrwpKdx5pUrDWgJDcw+jfucjdkKKDeMl3pF1NGocJceadbyNo1eSHAlrt1r8+4MCvlllM7iLF1WRfPKtZO4LXqqkKbz1jcWUjwpoUkslKcXgkes00vyCW58NsHm34PbLFT6YZ/HLDodhvXWu6OahZhX39mQp/5gCx3JKxD7ebBPZPHqft5QwZ5XJmH9BfjCAWRCi/wUaz9yWRmqSwvtzA3yxyMMbEwSWJZg+J8g/JudxTkuDdVuTaNM0yCvj/aQnudei1Qp4lLaiqFCxT2R2iQQncmJmx36bwePDbP41hxqVVbAVWjRL5Yb+ks5nqezLlFg2vDDd4rN5FqbMIxyWqKqfSXcZDO3urdAH7iqKChH7BGWTkFg9or37+Q8CzFwWIFlT2JntY3gPhSXrBOt+1TizbpBGtSTvLdConmZxbkvJwrUatq2QkZpDWpKHqfcnkez7fZziPJGc9AVaSaHlcbiSxIbajmTtZotXP1MYNyyF1x5I44quGq/M1Dm9nsXLd9rUrKax/leNSWNUrusH367x0aoBvP+Yysv/SOdQvsbslQ6OIxM+Z/5HplDsk9GsojzLFqyEpvGuRMSSOI4kGIaJ74YJFliEQpKUJIW7h2hMHBVm5mKbf00zGdlbMGWsxrodFs9/aHB51zDP3q5Tu6qCpoFPs3hwapi9h2Thk6Z/FgqHcdeEcYZMbNdyUZT0CJkcIbiQhENqkadpSeatNBn7osmh7ADnnS545rZKZGVbNKuvs+eAw4T/2qzeaFO1UpiDeWk8PUrS+SzQVVi42uK9uRYzl2bj9yv071SJx2/U3Kcv/ySc9GG8TMorNKXFdXu648C+g+4bHUYNUvB4YHCPVJats5mxwmHDjhBvfJnHk6NUeraThEM+3rovTE5OiIdfzSY7z+G56e796LWrenjwuiSWrbP5aauD5d4r+KfgpIhdrl5dRlCpJEgjpTtX//cLC59P4ZLOBmnpGTSoCQu+D1EtBXb/Jvh1n02lFIWremh0amXQsoFBQdBmzaYAqiY4nJNLkhdaN7FoXEtneC/B2MkhsvPd+9r/DJwUsV0SKENhZzx24tJLCZt3OSz4weHp0Tp5AUmj6pL0ZIUV6y3q1tDY8ZtBszp+FAUysxUsJIqAapXAlBmELIfD+ZCVC5demEFBQOOSziq6V2XqDAsnUs4fnRixT0xr3Fzi8ooKdGKKcIm8vMa0Jbf8XzZ9zhO0bKCSWyC5upvJ0p8tdmRl8PZskx82mTSspaMICIYswmG3KjWrGWQW+Hj7qxB7slQ+W2LRrD4oOFRL15j0d5UPv7XZnyVLWTP8sVCAksfXx4ibT2y3O8ECJ+DrJSY7Dnm5qLWClNCsvka39h7mroRLOuaweVuY2UsO0aw+CEWgKAoIt1KnVdEgnMeUT+CeoQ6rN9lIRdDuDBUJ1K+h0raxw6jHg+4OcoLaErvvV6QrfRiX8R5lIUvuMEeV/tiQwJlNNNKSbF7+3MSy3Rv+DmZZ/LJNcvMlPm4aaOBLrkzVdPeNCiCRkUVXWoqgeR3BeS0VbhzgJzXJzyfzCzA099WTqzaYfLvKZkgPFU079jNq8UY/VSjHX3yC9Am8TgaqAnVrKHz+lJ9DmSFuesLktyyLZRskp9c3aVpX0Lq5Ss0MDUN3q+X1KBiG+/YFIQTnn61Tv5ZBsl/Qo3WIBT/q5BVIPpxvMuopizuuNBjSQy98JdfRcKrFjUc5vsq4qYvlcXwZHjVCQLVKClP+kYqJZNxUwRufFdCnkxdVCOYty6dhjQL8XhBCUiXdfa0WAoRwaN9SYc2WXAAu6+Jj34EgL36Sy0OvwsTbDIb11st1K3B8761gM5SLxPtruWp6YoSON1B5XDy6BmkpCv++w0BxAuw65KdZfYFpSxat9dKwtoIeuQ6dkaKiKQ4C97p47aqS/Yc0MnMkVSoJenbQeWMmPDkaLjzHfeIEUbQaKc39EUgs9hFJ0LwEXkfiGJJAAkNLQFUF6UmCf43x8fQYg/o1VLJyJQdyPbRtqYJ0G5uW6pCRaiEiU3iST6FyWhLLfwohcbihv4d3HjTof76Oobu3HpUs9Y9JSbGP2BY3QrFmHzFNESfTZKoKackqPdtLvAYcOGQTCAY4q7Fa+AhOqk+lcS33BkEF8BqSFqcFWPCDe+akZlWFc5oZkYfn40uIEr+r/TFcSbHLRMb8LeZVJrFFlhsZeUGZjK902RTeMqS4Z75yAyYzlpqYVlF4ozoqQggcCXszHdZvt7Ed3b0bhZP/Rv9ThcgPhossWKYtEwid0KM4pQYf70FrQj2Ke4bCkoVrLO5/FYb1UBk10H0hnmW7vXbzTodRT4Vo00IwbqSHSimRT1kkzPuPz1GJXSK4hEcRCYOOV+CyKCGQ+2UCy5IsXmNz738sBpyncNsQDZ9HYeMOh7GTwjSqozH+OoXKKUrJW5BK5FmBnARTlVPs4xD6ZAqciDiBpHQ/wrJ5l8WoZyRN69iM7KUwZpKXi9vnc89IL37P7/tJjhNFkdhlaJJA6oTxS3hVtNDxRISPVmPDdofRzzps21nANf193DlUI9mnEH2L9ansyBXBEcU+NqHL/xLbckY7fiGE+zRJMCyZv8KhR0cVTS29Rx93eUegvO0+kbhil1pygqASHvFe5RO6HFEiyCOavuzQ4kgJDkUPG7gcTQ7FKU/K8rf15FKm2AkD4ryKfka2EiSJJXFwYt/yU9zk5RGgkDIjlxlYQRyvbYoQ+YGYBVoM5Rc6xjNBkijFgxJmVH6OqMExil/uiBxt5CNwtAY4NkoRO4HUCfUpW2j34ynEPMpadvxYolelykVMtOjtv8XTVoT4x0msaRK24fhJKHYCqRPoVMKj6GeksrZtIwFFcT+RIKInpMvAidzw5ThO5FWQSrka7TgOiKL0qqoipXRvViikKB9ZeHbOrV88jozceBZb37idSgiBEv9Bmjhk7BJGUuqCMBbbjj5YJk/oq6pLiH28QluWRW5uLps3beLnn9cSDps0atSIlqe3omq1qigisXhSSizb5rff9rNh3Tq2bt1MckoqrU4/gwYNG+L1+VBjznoUjhVSYlkWe/ftY93PP7F1yxZSkpM4vdUZ1G/QgPRKlUqIKaVk//7fWLvmB3Rdp3XbtqSkpCIiH5VxHIcF8+dSEAwW/hbC/aCLQEB0xELQrkNHqlapUiz/KFLCms0Oew7YOLZD7Wo6ZzUt/c3EjiPJDynM+g5My6RBTYWOrcqxd5SUISFHJXZRSAkPiBhl69Yt3H/fvSxdsphgMIDjSAzDoEmTpjz08KNc0LkzmuY+Ax1NLqXEcRzmzp7NA+PvY9fOXYTNMIqi4Pf56Nm7D08+/TSpqekldhTHcXh32js89+xEdu3aSTgUQlEUfH4fHTqcy6RJL1Czdu1CsaJpZn/9NbfcfCOqrvPxx5/RtEULNE1z62LbtDnnTPbt24fjOIU7FJERIzpSGYaHd9//gE6dLkhQL0lBEM67IZddB0KgKDQ9zWDBlGQMo+RnViVgW5Id+yQ977TJzS5gQFedV+71x5v5mCm225QldBkeEBEsPz+f8fffz/x5c0lK8nPJpZcxbPgIGjduwsZ1P3PH7beyceNGbMcplouUkn1793LXnbezdes26tWvy9VXX03Xrl0JBIN88tGHPDxhAqZpImXRF3kty2LliuWMH3cvu3btpG2bNtw99h6GjRiJ3+dn8aJvuf/++7AsKzJsFybFcRws28Z2HIruFI4ECkHHc8+lZ89e9O7dh4u698DQdaSUtGjRgp69etOrVx969uxFpUoZMS0pwnJgxXqTg3kGjlCxbcG2/Rrfrbew7WJVKdrpcYcs27QxTRtpRT9GGx/72JzbxYqKKk6Ml7tZwqMQRzrMnTObxYsXIoTg4Uce5eIBg1AUlb1793DtyOGsX7+ezz79mKbNmrlDpigahh9+aAJ79+zmtDp1eO31t6nXoAGhUJAXJj3H6/+dypKlS9izezd169VFRD7qIoRgyZLFgOCss87m1dffIiMjA9uyqFmzFs88+X8sXbqY7JxsMiplxPW+2F07ahB3XSGEZOKzz7txJARDQdqefSa24zDqltEMHHhJYf29Xh+Ioi8ER3MTwLxVFuFQAY1P8yKkwuZdIT74RtKhhfsaj5KzmSyqlYw+a5ZAl6MhWpnYnl0iy9J1LeEhIy+PWbVqJaFAgMqVK9OzV18Mw4NhGNSoUZMOHTtgWRbz5s7BsszCTKQj2bd3DytWLEdRNcaMuZXT6tYhEAgQLCjghhtu5NXX3uBfzz5HRkblyJzpzpeKEAwdeiXvTf+Qfz37HJWi87MQpKSmIFQVXdPc4blktUsSiRCdBnx+P/4kP16Pp3A+N3SDpORkfH4/Pr8fobgLqVjnrj9g0VoVVdUYcIGXK3tr6IbCqk0aB7KO8jGT4tkfnYtJHxE76luSopDIVlzUYv1DSmwpsW27cOi0bLdhpmkhgD179pCXm1coGsDeffvIzsrC0DW69+zJO2++wdDLBnHZJQMZfcvfsC2Tdm3bk5ScVNiLJIAQVKtegzat29KsWXPCwSD79u7h61kz+c9LUxBCcOXVw0lOTins1UU2KNGQov+RncntvcLtGtFypdsjXRcNL46UsHWXZOO2AIrqoV0LSY92Ch7NYfuuXDbvdEpepo+ULyLbMmqfuGoeLbHJFRLN1CU8EhMv9PmdO+P3+zl86BAvvTSFzEOZ5Ofn8u2C+Xw5cya2bRMKhcjJyXYXPriC5ebkEAq7C7IHxt3Pk08+QX4gQGbWIebPm8P1113D66+9WrhYikUIgVAUHMfhzTdf59yO7bj+2mv4bd8+rr/hRv5+2x3uV/wExaxamIt037KXsMkJjC1EjAilOMuSvPxpAQUhQbUqOs3rCapVEjSra2Ch8dEiiWW5RRejcFkRWcAduagjuki2yPgFWmFIic3IVsIwF4Hgws5duHjAQKQQvDDpWbp37cJFXS7k+mtHUqt2LRACQ9fR3C+YFaY1TRPLsijIz2fx4sW89dY0Znz5NfMXLOL8Cy4kHAozZcoUduzYUXgcHY9QFBo2akTfPv1p06YtQgjefusNpvz7BWzLRjrFD3iLemSk55ZiqGj8eJ/ScCTsPQgzv/MAFm0bhqheSSHVL2h/uoolPcz9XrA3U+JEDuFiXVFtot28NOJTHtmVFLs0SpQb4xH5Ep6u64wb/wBjxtxKixYtUBSFqlWrcc+99zFw4KUAqLpOauSYFtwRwefzoWkaQlX4299u4Zy2bUlKSqJylSo89MjD+Hx+DmceZN++PTE9tOiQzbZthBBc1L0nkyb/mw8/+pT/e+ppQDD5hUnMnfMNdmQ6ibY92qvcJVGJxkG8qSJREozaxZHuKvxQdgChaGTmCx55zeLhV8L8vD2MtPP47ZDF18vDCUuVFKktC2UvKVy5iIte/L7xmB9FmyWvYhUzTsymbdukpqbx99tu54uZs1j63XI++ewLbrjxJnbt2oGqqtSrVx+vz1eUXDpkVK5MaloqqqLSrEVzlOhjOhKSU9LQDQ+m7RAKhWIaIJHSYdMvG1kwfx7btm1BURQ0TcPr9zPokkupVqMG+fn5fPfdd0D0i7mFJcdsx/qVNGZ0jo4SGyvWORJs6T7rLe18HMdk4WqLVz8O8OqnIRZ9LxFCxQplM+97lVAodsXtlllUsvs248JTcMfiYilaoCUILIXSokkpWb58Gd27daFbl858u2ABumGgqir79u1n9uzZaIpCr1690FQN6Tgg3dmpXr161KtbH9M0eevNN8jNzSucn+fNmUtBXjbJySlUr1ajcM6OHrLd94+xXDPiap568gksy8RxbBzH5scf1pB54ACKopCWlloodKEdZOR9ZlHfqFGLWlTkZLHBNYFVI05IsvMcFq9xEKpBj/Z+nrhF58kxOk+O0XhytMbgLgaq5mXtlhD7D8fN27GHWqUs/ihZarldwmE8Upy7VfSjyC/BJkLQunUb0tJS2b93N/+4+3aef+5ZXpz8PBf3683OX3+ldt26dO/RC0TRnCkUBb/Pz7jxE0hPS2X+3LmMHnUT7747jbH33MWDE8YRMi3OPe9cGjSoj1CUosoLhX79B2BZNp998glDrxjMu9Pe4fnnnuXmUTeQl5tLtWrV6duvf4mVs7tZtMouJNY6EWJX3iXMEYN0YOZCk31ZEgWDYb1VhvcxGN7Xw/B+Xob39XLzQINUn0LmYcm8lXbxVTnR/8UrEBulrPKPREKxS6OEUYptSjRd4/F/PkmzFi3JPJTFU089wT//+TgHDhzg9FZnMPnfU2jQsAGq4p7jjmahqCrtO3Zk/IMPkVG5MgsWzGPsnXcw7c030TSNiwcM5MEHH8Hj9RXtJEKgqCqXXX45d9x1N5UzKrN40SLG3n0XTz35BFmZh2jeogUvTH6RBg0bocadHxdCQRGimH8Jg0Z/CAVFUdB13T0/n8DiMvIZ5g/mGzi2Qka6QbsWOqoQaIrrFCR1ayg0qJuMY0vengWhsEOxtSOgqBq6R3Nfthfjf7yIvECoxPokKl7sv7L9i35YpkUoHObTTz5i5YrlKELQ6syz6duvL5UrVyk8fo1vRHSxtWvnDj75+EN++eUX0lLT6drtIjqdfz4erxdVVeKG06LhfMumX/jyyy/Ztn0LSb4kWrdtS4/uPUlNSyt2AQXcrrpjx3bmfP01qqbRt/8AMjIySlwwiWJbJm+/9RamadKt20U0atw4PgpSQna+5ItvIS8Qokq65NKLfMUH/8h96V8vs9m6y8HQFS7pppCe7E4pjiPJLRBMn6tihQM0qSPo1kGPySGeeCtGKMW7hNhFm8V3t9KFLukvIxcbXONJnMhrh5TIEFw6Ra+jEsJNa9u2e6WstEtFESNGifb86CGaoihxu4eLlEXvpyxtbowl9vi+rPiOU7SYKy1asXk6waurZeSTlYpStB4/EZQidvlFjY9UXMxEO0w8cb6l/Cyz0cUCy4xZemhpypx0SmnwSUDkFYQKsy8qJ5FIxYUuzb/sPOKJ5JA4sNwk1rps8coMPaHCH6FxRwimfFHKReJJqhyULXRxSvrLEyY0xXKL/VHMtwRlhsrooVipMRIQzTHelS84lnJEOSYSiH0isi8xnsdQFHBUtiwHxbIr/FG2ycoOjVRSxps/kYtPV3ZwIo4i6jGRQOwySizNv4yg0vxLDzg+ihmsWBllF3hEQ8cKlyhyWWGlcAxJjkB8jsVdYrFjcCtRRlXKCCpJJHJZHf8EUZh/MUsW+5GQI8eIIdaW5eQYkkSITVmaK5s4sY+cgMJYRXGLpypSsoR/BVPMBMWKP3Jdym/CI3NsecWmOkLK+KiluEKxj5DdcRKT+9H06tiF0jEtmlwKUxSzW/nzibfbkTja+EUkSBWfWYwrNEnJoITu/wF1CcK4MFrgigAAAABJRU5ErkJggg==" alt="963ITAI">
+    <div class="divider"></div>
+    <h1>AI Governance Readiness Assessment</h1>
+  </div>
+  <div class="header-right">
+    <button class="btn-sm btn-outline" onclick="resetAll()"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+    <button class="btn-sm btn-outline" onclick="exportResults()"><i class="fa-solid fa-download"></i> Export</button>
+    <button class="btn-sm btn-fill" onclick="window.print()"><i class="fa-solid fa-print"></i> Print</button>
+  </div>
+</div>
+
+<!-- Progress -->
+<div class="progress-bar">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-info">
+    <span class="pct" id="progressPct">0% complete</span>
+    <span class="count" id="progressCount">0 of 42 questions answered</span>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="container">
+
+<div class="intro">
+  <h2>Assessment Questionnaire</h2>
+  <p>This questionnaire evaluates your organization's AI governance readiness across six domains aligned to the <strong>NIST AI Risk Management Framework (AI RMF 1.0)</strong>. For each question, select the maturity level (1–5) that best describes your organization's current state. Use the notes field to capture additional context, evidence, or observations.</p>
+  <div class="tags">
+    <span class="tag">NIST AI RMF 1.0</span>
+    <span class="tag">ISO/IEC 42001</span>
+    <span class="tag">EU AI Act</span>
+    <span class="tag">6 Domains · 42 Questions</span>
+  </div>
+</div>
+
+<div id="questionnaire"></div>
+
+<div class="summary-panel" id="summaryPanel">
+  <h3><i class="fa-solid fa-chart-bar" style="color:var(--blue)"></i> Domain Scores Summary</h3>
+  <div class="summary-grid" id="summaryGrid"></div>
+  <div class="overall-score">
+    <div class="big-num" id="overallScore">—</div>
+    <div class="label">Overall Maturity Score (Average)</div>
+  </div>
+</div>
+
+</div>
+
+<footer class="footer">
+  <p><strong>963ITAI</strong> — Agentic AI, Governed.  |  Austin, TX  |  <a href="https://963it.ai" target="_blank">963it.ai</a></p>
+  <p style="margin-top:6px">© 2026 963ITAI. All rights reserved. Aligned to NIST AI RMF 1.0, ISO/IEC 42001, and the EU AI Act.</p>
+</footer>
+
+<script>
+var DATA = [
+  {
+    domain: "AI Governance & Strategy",
+    tag: "NIST: GOVERN",
+    questions: [
+      {
+        q: "Does your organization have a documented AI strategy aligned to business objectives?",
+        context: "Assesses whether AI initiatives are driven by clear business outcomes rather than technology experimentation.",
+        scores: [
+          "No AI strategy exists. AI adoption is opportunistic or ad hoc.",
+          "Informal AI goals discussed but not documented or linked to business strategy.",
+          "Documented AI strategy exists and is communicated. Partial alignment to business objectives.",
+          "Comprehensive AI strategy with clear business alignment, KPIs, and executive sponsorship.",
+          "AI strategy is a core pillar of enterprise strategy. Continuously updated with board-level governance."
+        ],
+        followups: [
+          "Who is the executive sponsor for AI initiatives?",
+          "How often is the AI strategy reviewed and updated?",
+          "Are AI investments tied to specific, measurable business KPIs?"
+        ]
+      },
+      {
+        q: "Are there formal AI governance policies, procedures, and organizational structures in place?",
+        context: "Evaluates the maturity of governance frameworks for AI risk management across the organization.",
+        scores: [
+          "No formal AI governance. AI decisions are made without policy guidance.",
+          "Basic awareness of need for governance. Preliminary discussions but no formal policies.",
+          "Documented governance policies covering key areas. Governance committee or role exists.",
+          "Comprehensive governance framework with clear policies, escalation paths, and regular reviews.",
+          "Sophisticated, adaptive governance model. Policies continuously updated based on emerging risks and regulations."
+        ],
+        followups: [
+          "Is there a dedicated AI governance committee or officer?",
+          "How do governance policies address third-party AI tools and vendors?",
+          "Are governance policies mapped to specific regulatory frameworks (NIST, ISO 42001, EU AI Act)?"
+        ]
+      },
+      {
+        q: "Has your organization defined its AI risk tolerance and escalation paths?",
+        context: "Assesses whether risk appetite for AI is formally articulated and operationalized.",
+        scores: [
+          "No defined risk tolerance for AI. No escalation procedures.",
+          "Informal understanding of risk appetite. Escalation is ad hoc.",
+          "Documented risk tolerance levels. Escalation paths defined for major risk categories.",
+          "Risk tolerance integrated into AI project approvals. Clear escalation with defined SLAs.",
+          "Dynamic risk tolerance adjusted per use case and context. Automated escalation and monitoring."
+        ],
+        followups: [
+          "Who has final authority on AI risk acceptance decisions?",
+          "Are risk tolerance levels different for different AI use case categories?"
+        ]
+      },
+      {
+        q: "How do you plan to govern decision-making processes that involve AI recommendations?",
+        context: "Evaluates readiness to incorporate AI into business decision-making with appropriate human oversight.",
+        scores: [
+          "No plans for governing AI-assisted decision-making.",
+          "Basic awareness of need. Preliminary discussions but no formal plans.",
+          "Developing governance framework for AI-assisted decisions. Some policies for key areas.",
+          "Comprehensive governance framework. Clear processes for validating and acting on AI recommendations.",
+          "Sophisticated adaptive governance model. Continuous monitoring of AI-assisted decision quality."
+        ],
+        followups: [
+          "Which business decisions currently involve AI recommendations?",
+          "What human oversight mechanisms exist for high-stakes AI decisions?"
+        ]
+      },
+      {
+        q: "Are roles, responsibilities, and accountability for AI risk management clearly defined across the organization?",
+        context: "Maps to NIST GOVERN 2 — accountability structures for AI risk management.",
+        scores: [
+          "No defined roles for AI risk management.",
+          "Some informal awareness of who handles AI issues. No formal RACI.",
+          "Key roles defined (AI owner, risk manager). Documented but not consistently applied.",
+          "Clear RACI matrix for AI lifecycle. Roles span from board to operator level.",
+          "Dynamic accountability model with continuous training. Executive leadership takes explicit responsibility."
+        ],
+        followups: [
+          "Is there a RACI matrix for AI governance?",
+          "Do personnel receive AI risk management training?"
+        ]
+      },
+      {
+        q: "Does your organization have documented policies for AI ethics and responsible AI?",
+        context: "Assesses commitment to ethical AI development including fairness, transparency, and accountability.",
+        scores: [
+          "No AI ethics policies or principles.",
+          "General awareness of ethical AI concepts. No formal documentation.",
+          "Documented AI ethics principles. Applied to some projects.",
+          "Comprehensive responsible AI framework integrated into development lifecycle.",
+          "Industry-leading responsible AI program with external audits and public transparency reports."
+        ],
+        followups: [
+          "Are responsible AI principles reviewed against specific use cases before deployment?",
+          "Do you conduct algorithmic impact assessments?"
+        ]
+      },
+      {
+        q: "Does your organization have a process for decommissioning or phasing out AI systems?",
+        context: "Maps to NIST GOVERN 1.7 — safe decommissioning that doesn't increase risk.",
+        scores: [
+          "No process for AI system decommissioning.",
+          "Informal awareness that AI systems need lifecycle management.",
+          "Basic decommissioning procedures documented for some systems.",
+          "Formal decommissioning process with data handling, notification, and impact assessment.",
+          "Comprehensive lifecycle management including automated sunset triggers and compliance verification."
+        ],
+        followups: [
+          "How many AI systems are currently in production?",
+          "Are there AI systems that should be decommissioned but haven't been?"
+        ]
+      }
+    ]
+  },
+  {
+    domain: "AI Inventory & Shadow AI",
+    tag: "NIST: GOVERN + MAP",
+    questions: [
+      {
+        q: "Does your organization maintain a complete inventory of all AI systems, models, and tools?",
+        context: "Maps to NIST GOVERN 1.6 — mechanisms to inventory AI systems by risk priority.",
+        scores: [
+          "No AI inventory exists. Unknown how many AI tools are in use.",
+          "Partial awareness of some AI tools. No centralized tracking.",
+          "Documented inventory of major AI systems. Some gaps in coverage.",
+          "Comprehensive inventory covering all known AI systems, classified by risk level.",
+          "Dynamic, auto-updated AI inventory with risk scoring, ownership, and compliance status."
+        ],
+        followups: [
+          "How many AI systems or tools are currently deployed?",
+          "Who is responsible for maintaining the AI inventory?"
+        ]
+      },
+      {
+        q: "Has your organization conducted a shadow AI discovery to identify unauthorized AI tools?",
+        context: "Shadow AI — tools adopted without IT/security oversight — is one of the fastest-growing enterprise risks.",
+        scores: [
+          "No awareness of shadow AI as a risk. No discovery conducted.",
+          "Awareness that shadow AI may exist. No formal discovery process.",
+          "Initial shadow AI scan conducted. Some unauthorized tools identified.",
+          "Systematic shadow AI discovery across the enterprise. Containment plans in place.",
+          "Continuous shadow AI monitoring with automated detection and real-time policy enforcement."
+        ],
+        followups: [
+          "What tools do employees most commonly adopt without IT approval?",
+          "Do you have visibility into AI tools accessing enterprise data via APIs?"
+        ]
+      },
+      {
+        q: "Are AI systems classified by risk level (e.g., minimal, limited, high, unacceptable)?",
+        context: "Aligns with EU AI Act risk tiers and supports proportionate governance.",
+        scores: [
+          "No risk classification of AI systems.",
+          "Informal understanding that some AI uses are riskier than others.",
+          "Basic risk classification applied to some systems (e.g., customer-facing vs. internal).",
+          "Formal risk classification framework applied to all AI systems using recognized tiers.",
+          "Dynamic risk classification with continuous reassessment and automated compliance checks."
+        ],
+        followups: [
+          "Which risk classification framework do you use?",
+          "How many of your AI systems would fall into 'high-risk' under the EU AI Act?"
+        ]
+      },
+      {
+        q: "Is the intended purpose, deployment context, and user population documented for each AI system?",
+        context: "Maps to NIST MAP 1 — purpose, context, and stakeholder documentation.",
+        scores: [
+          "No documentation of AI system purposes or contexts.",
+          "Some AI systems have informal descriptions. Most are undocumented.",
+          "Major AI systems have documented purposes and user populations.",
+          "All AI systems have comprehensive context documentation including intended use and limitations.",
+          "Living documentation updated continuously with actual usage data and impact monitoring."
+        ],
+        followups: [
+          "Are system limitations and known failure modes documented?",
+          "Is documentation accessible to all relevant stakeholders?"
+        ]
+      },
+      {
+        q: "Do you have policies governing third-party AI software, pre-trained models, and AI supply chain risks?",
+        context: "Maps to NIST GOVERN 6 — third-party AI risks in the supply chain.",
+        scores: [
+          "No policies for third-party AI components.",
+          "General procurement policies exist but don't address AI-specific risks.",
+          "Some AI-specific clauses in vendor agreements. Basic due diligence on AI vendors.",
+          "Comprehensive third-party AI risk policies including model provenance, data rights, and exit clauses.",
+          "Advanced supply chain risk management with continuous vendor monitoring and contractual AI audit rights."
+        ],
+        followups: [
+          "How many third-party AI models or APIs are integrated into your systems?",
+          "Do vendor contracts include AI transparency and audit provisions?"
+        ]
+      }
+    ]
+  },
+  {
+    domain: "Data Readiness & Privacy",
+    tag: "NIST: MAP + MEASURE",
+    questions: [
+      {
+        q: "Are your data governance policies and practices sufficient to support AI initiatives?",
+        context: "Assesses whether existing data governance extends to AI-specific requirements.",
+        scores: [
+          "No formal data governance policies or practices.",
+          "Basic data governance exists but is not comprehensive. Limited consideration of AI needs.",
+          "Established data governance covering most aspects. Some AI-specific provisions.",
+          "Comprehensive data governance including AI-specific provisions. Regular audits.",
+          "Sophisticated AI-aware data governance fully integrated into operations. Continuous adaptation."
+        ],
+        followups: [
+          "Are data quality standards defined for AI training data?",
+          "How do you handle data lineage and provenance for AI models?"
+        ]
+      },
+      {
+        q: "What is the quality, completeness, and accuracy of data available for AI workloads?",
+        context: "AI model performance is directly dependent on data quality.",
+        scores: [
+          "Less than 20% of records have structured data suitable for AI.",
+          "20–40% of records have some structured data. Quality varies widely.",
+          "40–60% of records have good quality data. Improvement efforts underway.",
+          "60–80% have high-quality, consistent structured data. Clear capture processes.",
+          "Over 80% have excellent data. AI-assisted capture ensures consistency and completeness."
+        ],
+        followups: [
+          "Have you conducted a data quality assessment for AI-relevant datasets?",
+          "What data cleansing or normalization processes are in place?"
+        ]
+      },
+      {
+        q: "Have Data Protection Impact Assessments (DPIAs) been conducted for AI use cases involving personal data?",
+        context: "DPIAs are mandatory under GDPR for high-risk processing and expected under the EU AI Act.",
+        scores: [
+          "No DPIAs conducted for any AI use cases.",
+          "Awareness that DPIAs are needed. None completed yet.",
+          "DPIAs completed for highest-risk AI use cases.",
+          "DPIAs conducted for all AI use cases involving personal data. Regularly updated.",
+          "Automated DPIA processes integrated into AI development lifecycle. Continuous monitoring."
+        ],
+        followups: [
+          "Which AI use cases process personal or sensitive data?",
+          "Is the DPO involved in AI governance decisions?"
+        ]
+      },
+      {
+        q: "Is privacy-by-design integrated into your AI development workflows?",
+        context: "Assesses proactive privacy protection rather than retroactive compliance.",
+        scores: [
+          "No privacy considerations in AI development.",
+          "Privacy addressed reactively after development. No design-time integration.",
+          "Privacy checkpoints exist at key development stages for some projects.",
+          "Privacy-by-design principles applied systematically across all AI projects.",
+          "Advanced privacy-enhancing technologies (federated learning, differential privacy) routinely applied."
+        ],
+        followups: [
+          "What consent mechanisms exist for AI-processed data?",
+          "Can data subjects exercise their rights (access, deletion) for AI-processed data?"
+        ]
+      },
+      {
+        q: "How do you manage data lineage and provenance for AI model training and inference?",
+        context: "Data provenance is critical for auditability, regulatory compliance, and model debugging.",
+        scores: [
+          "No data lineage tracking for AI systems.",
+          "Basic awareness of data sources. No formal lineage documentation.",
+          "Major data flows documented. Some provenance tracking for key models.",
+          "Comprehensive data lineage from source to model output. Auditable records.",
+          "Automated, real-time data lineage with agent-to-data traceability. Immutable audit trails."
+        ],
+        followups: [
+          "Can you trace which data was used to train or fine-tune each model?",
+          "Do you track which AI agent accessed what data, when, and under which policy?"
+        ]
+      }
+    ]
+  },
+  {
+    domain: "Technical Readiness & Infrastructure",
+    tag: "NIST: MAP + MEASURE",
+    questions: [
+      {
+        q: "Can your current infrastructure support AI workloads without impacting system performance?",
+        context: "Assesses compute, storage, and network readiness for AI model training and inference.",
+        scores: [
+          "Infrastructure cannot support AI workloads without significant performance degradation.",
+          "Limited capacity. Significant performance impacts for AI workloads.",
+          "Infrastructure supports moderate AI workloads with manageable impacts.",
+          "Robust infrastructure supporting extensive AI workloads with minimal impact.",
+          "High-performance, AI-optimized infrastructure. No noticeable impact on operations."
+        ],
+        followups: [
+          "Are you using cloud, on-premise, or hybrid infrastructure for AI?",
+          "What GPU/compute resources are available for AI workloads?"
+        ]
+      },
+      {
+        q: "What is the maturity of your MLOps / LLMOps pipelines for model development, testing, and deployment?",
+        context: "MLOps maturity determines ability to reliably develop, test, deploy, and monitor AI models.",
+        scores: [
+          "No MLOps pipelines. Models developed and deployed manually.",
+          "Basic version control and manual deployment. Limited testing.",
+          "Established CI/CD for models. Automated testing for key scenarios.",
+          "Comprehensive MLOps with automated training, testing, deployment, and monitoring.",
+          "Advanced LLMOps with A/B testing, canary deployments, automated retraining, and drift detection."
+        ],
+        followups: [
+          "How do you version control models and training data?",
+          "What automated testing is in place for model outputs?"
+        ]
+      },
+      {
+        q: "How robust is your security architecture for AI systems?",
+        context: "AI introduces unique attack surfaces: model poisoning, prompt injection, data exfiltration via agents.",
+        scores: [
+          "No AI-specific security measures in place.",
+          "General security applies to AI systems. No AI-specific threat modeling.",
+          "Some AI-specific security controls (API security, access controls on models).",
+          "Comprehensive AI security architecture covering model, data pipeline, and API security.",
+          "Advanced AI security with adversarial robustness testing, real-time threat detection, and kill switches."
+        ],
+        followups: [
+          "Have you conducted threat modeling specific to AI systems?",
+          "Do you test for adversarial attacks (prompt injection, model manipulation)?"
+        ]
+      },
+      {
+        q: "How well can your AI systems integrate with existing enterprise applications?",
+        context: "Integration readiness determines how quickly AI can deliver value in existing workflows.",
+        scores: [
+          "No integration between AI tools and enterprise systems.",
+          "Basic integrations exist (e.g., API calls). Mostly manual data transfer.",
+          "Established integrations with key systems. Some automation.",
+          "Well-integrated AI capabilities across major enterprise applications.",
+          "Seamless, bi-directional AI integration fabric across all enterprise systems with governed data flows."
+        ],
+        followups: [
+          "What integration methods are used (APIs, SDKs, middleware)?",
+          "Are integrations governed and monitored?"
+        ]
+      },
+      {
+        q: "What monitoring and observability capabilities exist for AI systems in production?",
+        context: "Post-deployment monitoring is critical for detecting drift, bias, failures, and performance degradation.",
+        scores: [
+          "No monitoring of AI systems after deployment.",
+          "Basic health checks (uptime, latency). No AI-specific monitoring.",
+          "Some model performance monitoring. Manual review of outputs periodically.",
+          "Comprehensive observability including model drift, performance, fairness, and reliability metrics.",
+          "Real-time AI observability platform with automated alerting, root cause analysis, and self-healing."
+        ],
+        followups: [
+          "How do you detect model drift or degradation?",
+          "What SLAs exist for AI system performance?"
+        ]
+      },
+      {
+        q: "Can you provide an overview of your platform architecture and integrations that may affect AI implementation?",
+        context: "Understanding the existing technology landscape is essential for identifying AI deployment constraints.",
+        scores: [
+          "No documentation of platform architecture. Unknown integration landscape.",
+          "Basic architecture known informally. Limited documentation of integrations.",
+          "Architecture documented. Key integrations mapped. Some legacy constraints identified.",
+          "Comprehensive architecture documentation with integration map. Legacy modernization plan.",
+          "Living architecture documentation with AI readiness annotations. Automated dependency mapping."
+        ],
+        followups: [
+          "How do legacy systems impact your ability to adopt AI?",
+          "Are all knowledge articles and data sources accessible via APIs?"
+        ]
+      }
+    ]
+  },
+  {
+    domain: "Risk Measurement & Trustworthiness",
+    tag: "NIST: MEASURE",
+    questions: [
+      {
+        q: "Do you have testing, evaluation, verification, and validation (TEVV) processes for AI systems?",
+        context: "TEVV is a core component of NIST MEASURE — ensuring AI systems perform as intended.",
+        scores: [
+          "No TEVV processes for AI systems.",
+          "Basic functional testing only. No AI-specific evaluation.",
+          "Some TEVV processes for key AI systems. Performance benchmarks defined.",
+          "Comprehensive TEVV across all AI systems. Regular evaluation cycles.",
+          "Advanced TEVV with continuous automated testing, red-teaming, and independent validation."
+        ],
+        followups: [
+          "How often are AI models re-evaluated after deployment?",
+          "Do you conduct red-teaming or adversarial testing?"
+        ]
+      },
+      {
+        q: "What bias detection and fairness evaluation capabilities exist for your AI systems?",
+        context: "Maps to NIST trustworthiness characteristic: Fair with harmful bias managed.",
+        scores: [
+          "No bias detection or fairness evaluation.",
+          "Awareness of AI bias risks. No formal evaluation process.",
+          "Basic bias testing conducted for some models (e.g., demographic parity checks).",
+          "Comprehensive fairness evaluation framework applied across AI systems. Multiple fairness metrics.",
+          "Continuous, automated bias monitoring with real-time alerts and remediation workflows."
+        ],
+        followups: [
+          "Which fairness metrics do you use?",
+          "Have you identified demographic groups at risk of disparate impact?"
+        ]
+      },
+      {
+        q: "How explainable and interpretable are your AI systems' outputs?",
+        context: "Explainability is essential for trust, debugging, regulatory compliance, and user acceptance.",
+        scores: [
+          "AI outputs are black boxes with no explainability.",
+          "Some outputs include basic confidence scores. No deeper explainability.",
+          "Key models have explainability features (e.g., feature importance, decision rationale).",
+          "Comprehensive explainability across AI systems. Documentation for responsible use.",
+          "Advanced interpretability with user-appropriate explanations. Audit-ready transparency reports."
+        ],
+        followups: [
+          "Can end users understand why the AI made a specific recommendation?",
+          "Are model cards or AI system datasheets maintained?"
+        ]
+      },
+      {
+        q: "What safety and reliability testing methodologies are applied to AI systems?",
+        context: "Maps to NIST trustworthiness characteristics: Safe, Valid & Reliable.",
+        scores: [
+          "No safety or reliability testing for AI.",
+          "Basic functional testing. No AI-specific safety assessments.",
+          "Safety testing for high-risk AI applications. Fail-safe mechanisms for some systems.",
+          "Comprehensive safety testing with residual risk assessment and fail-safe mechanisms.",
+          "Advanced safety program with real-time monitoring, automated kill switches, and formal verification."
+        ],
+        followups: [
+          "Do high-risk AI systems have fail-safe or fallback mechanisms?",
+          "How do you assess residual risk after mitigation?"
+        ]
+      },
+      {
+        q: "Do you maintain audit trails and documentation for AI system decisions?",
+        context: "Maps to NIST trustworthiness: Accountable & Transparent.",
+        scores: [
+          "No audit trails for AI decisions.",
+          "Some logging exists but is inconsistent and not designed for AI accountability.",
+          "Audit trails for major AI systems. Basic documentation of decision logic.",
+          "Comprehensive audit trails with immutable logs. Full decision lineage documented.",
+          "Real-time, immutable audit infrastructure. Post-quantum identity chains. Agent-level traceability."
+        ],
+        followups: [
+          "Can you reconstruct the inputs, logic, and outputs for any AI decision?",
+          "Are audit logs tamper-proof?"
+        ]
+      },
+      {
+        q: "How do you measure and manage the environmental impact of AI model training and operations?",
+        context: "AI sustainability is an emerging component of responsible AI and ESG reporting.",
+        scores: [
+          "No awareness of AI environmental impact.",
+          "General awareness of compute costs but no environmental tracking.",
+          "Some measurement of energy consumption for major AI workloads.",
+          "Comprehensive tracking of AI carbon footprint. Efficiency optimization practices.",
+          "AI sustainability integrated into governance. Green AI practices with public reporting."
+        ],
+        followups: [
+          "Do you track energy consumption for AI training jobs?",
+          "Is AI sustainability part of your ESG reporting?"
+        ]
+      }
+    ]
+  },
+  {
+    domain: "Operational Readiness & Incident Management",
+    tag: "NIST: MANAGE",
+    questions: [
+      {
+        q: "Does your organization have AI-specific incident response plans and recovery procedures?",
+        context: "AI incidents (model failures, bias events, data breaches) require specialized response procedures.",
+        scores: [
+          "No AI incident response plans exist.",
+          "General IT incident response applies. No AI-specific procedures.",
+          "Basic AI incident response procedures documented for major systems.",
+          "Comprehensive AI incident response with clear playbooks, roles, and communication plans.",
+          "Advanced incident response with automated detection, orchestrated remediation, and post-incident reviews."
+        ],
+        followups: [
+          "What was the last AI-related incident and how was it handled?",
+          "Do you have playbooks for different types of AI failures?"
+        ]
+      },
+      {
+        q: "What post-deployment monitoring and feedback mechanisms exist for AI systems?",
+        context: "Maps to NIST MANAGE 4 — capturing and integrating feedback about deployed AI systems.",
+        scores: [
+          "No post-deployment monitoring or feedback collection.",
+          "Basic uptime monitoring. No structured feedback from users.",
+          "Performance monitoring with periodic user feedback collection.",
+          "Comprehensive monitoring with continuous feedback loops from users and operators.",
+          "Real-time monitoring with automated feedback integration and model improvement triggers."
+        ],
+        followups: [
+          "How do end users report issues with AI outputs?",
+          "Is user feedback systematically incorporated into model improvements?"
+        ]
+      },
+      {
+        q: "Do you have the ability to quickly deactivate or disable AI systems that demonstrate issues?",
+        context: "Kill-switch capability is critical for high-risk AI systems and regulatory compliance.",
+        scores: [
+          "No ability to quickly deactivate AI systems.",
+          "Manual shutdown possible but slow and uncoordinated.",
+          "Documented shutdown procedures. Can deactivate major systems within hours.",
+          "Rapid deactivation capability for all AI systems. Tested regularly.",
+          "Sub-50ms kill-switch enforcement at session level. Automated policy-based deactivation."
+        ],
+        followups: [
+          "What is the maximum time to fully deactivate a production AI system?",
+          "Are deactivation procedures tested regularly?"
+        ]
+      },
+      {
+        q: "How do you manage changes, updates, and version control for production AI systems?",
+        context: "AI systems require careful change management due to potential for performance degradation or bias introduction.",
+        scores: [
+          "No change management for AI systems. Updates are ad hoc.",
+          "Basic version tracking. Changes deployed without formal review.",
+          "Documented change management process. Peer review for major changes.",
+          "Comprehensive change management with staged rollouts, testing gates, and rollback capability.",
+          "Automated change management with canary deployments, automated regression testing, and instant rollback."
+        ],
+        followups: [
+          "Do you have rollback procedures for AI model updates?",
+          "How do you test that updates don't introduce new bias or performance issues?"
+        ]
+      },
+      {
+        q: "Do you have communication plans for informing stakeholders about AI system performance and incidents?",
+        context: "Transparency with stakeholders builds trust and meets regulatory notification requirements.",
+        scores: [
+          "No communication plans for AI-related events.",
+          "Ad hoc communication when issues arise. No predefined plans.",
+          "Basic communication templates for major AI incidents.",
+          "Comprehensive communication plans covering incidents, performance updates, and stakeholder notifications.",
+          "Proactive, multi-channel communication strategy with automated notifications and public transparency."
+        ],
+        followups: [
+          "Who needs to be notified in the event of an AI incident?",
+          "Are customers or regulators notified about AI system changes?"
+        ]
+      },
+      {
+        q: "Do you have processes for continuously improving AI systems based on operational learnings?",
+        context: "Maps to NIST MANAGE continual improvement — integrating lessons learned.",
+        scores: [
+          "No process for incorporating operational learnings.",
+          "Informal, ad hoc improvements based on individual initiative.",
+          "Periodic reviews of AI system performance with documented improvement actions.",
+          "Structured improvement processes with feedback loops, retrospectives, and prioritized action items.",
+          "Continuous improvement engine with automated performance analysis, A/B testing, and data-driven optimization."
+        ],
+        followups: [
+          "How often do you conduct retrospectives on AI system performance?",
+          "Are operational learnings documented and shared across teams?"
+        ]
+      },
+      {
+        q: "How do you monitor third-party AI components and pre-trained models after integration?",
+        context: "Third-party AI components can change, degrade, or introduce risks after initial integration.",
+        scores: [
+          "No monitoring of third-party AI components after integration.",
+          "Basic awareness that third-party models could change. No monitoring.",
+          "Periodic manual checks on third-party AI component performance.",
+          "Systematic monitoring of third-party AI components with contractual SLAs.",
+          "Continuous automated monitoring with drift detection, automated alerts, and vendor accountability."
+        ],
+        followups: [
+          "How many third-party AI models are in production?",
+          "Do you receive notifications when vendors update their AI models?"
+        ]
+      }
+    ]
+  }
+];
+
+var answers = {};
+var TOTAL = 0;
+DATA.forEach(function(d){ TOTAL += d.questions.length });
+
+function render(){
+  var container = document.getElementById('questionnaire');
+  var html = '';
+  var qIdx = 0;
+  DATA.forEach(function(domain, di){
+    html += '<div class="domain-section">';
+    html += '<div class="domain-header">';
+    html += '<div class="domain-num">' + String(di+1).padStart(2,'0') + '</div>';
+    html += '<div class="domain-info"><h3>' + domain.domain + '</h3>';
+    html += '<span class="domain-tag">' + domain.tag + '</span>';
+    html += '<span class="domain-count">' + domain.questions.length + ' questions</span>';
+    html += '</div></div>';
+    domain.questions.forEach(function(q, qi){
+      qIdx++;
+      var key = di + '-' + qi;
+      var answered = answers[key] !== undefined;
+      html += '<div class="q-card' + (answered ? ' answered' : '') + '" id="qcard-' + key + '">';
+      html += '<div class="q-top"><span class="q-num">Q' + qIdx + '</span>';
+      html += '<span class="q-text">' + q.q + '</span></div>';
+      if(q.context) html += '<div class="q-context">' + q.context + '</div>';
+      html += '<div class="maturity-selector">';
+      var labels = ['Initial','Developing','Defined','Managed','Optimized'];
+      for(var s=0;s<5;s++){
+        var sel = answers[key] === s+1 ? ' selected' : '';
+        html += '<div class="mat-option' + sel + '" onclick="selectScore(\'' + key + '\',' + (s+1) + ')">';
+        html += '<span class="mat-num">' + (s+1) + '</span>';
+        html += '<span class="mat-label">' + labels[s] + '</span>';
+        html += '<span class="mat-desc">' + q.scores[s] + '</span>';
+        html += '</div>';
+      }
+      html += '</div>';
+      if(q.followups && q.followups.length){
+        html += '<div class="followups">';
+        html += '<span class="followup-toggle" onclick="toggleFollowups(this)"><i class="fa-solid fa-chevron-right"></i> Follow-up probes (' + q.followups.length + ')</span>';
+        html += '<ul class="followup-list">';
+        q.followups.forEach(function(f){ html += '<li>' + f + '</li>' });
+        html += '</ul></div>';
+      }
+      html += '<div class="notes-area">';
+      html += '<span class="notes-toggle" onclick="toggleNotes(this)"><i class="fa-solid fa-pen"></i> Add notes</span>';
+      html += '<div class="notes-field"><textarea placeholder="Evidence, observations, or additional context…" id="notes-' + key + '"></textarea></div>';
+      html += '</div>';
+      html += '</div>';
+    });
+    html += '</div>';
+  });
+  container.innerHTML = html;
+  updateSummary();
+}
+
+function selectScore(key, score){
+  answers[key] = score;
+  render();
+}
+
+function toggleNotes(el){
+  var field = el.nextElementSibling;
+  field.classList.toggle('show');
+  if(field.classList.contains('show')) field.querySelector('textarea').focus();
+}
+function toggleFollowups(el){
+  var list = el.nextElementSibling;
+  list.classList.toggle('show');
+  var icon = el.querySelector('i');
+  icon.className = list.classList.contains('show') ? 'fa-solid fa-chevron-down' : 'fa-solid fa-chevron-right';
+}
+
+function updateSummary(){
+  var answered = Object.keys(answers).length;
+  var pct = Math.round((answered / TOTAL) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '% complete';
+  document.getElementById('progressCount').textContent = answered + ' of ' + TOTAL + ' questions answered';
+
+  var gridHtml = '';
+  var totalScore = 0; var totalAnswered = 0;
+  DATA.forEach(function(domain, di){
+    var dScore = 0; var dCount = 0;
+    domain.questions.forEach(function(q, qi){
+      var key = di + '-' + qi;
+      if(answers[key]){ dScore += answers[key]; dCount++ }
+    });
+    var avg = dCount > 0 ? (dScore / dCount).toFixed(1) : null;
+    if(avg){ totalScore += parseFloat(avg); totalAnswered++ }
+    gridHtml += '<div class="summary-domain">';
+    gridHtml += '<span class="sd-name">' + domain.domain + '</span>';
+    gridHtml += '<span class="sd-score' + (avg ? '' : ' na') + '">' + (avg || 'Not scored') + '</span>';
+    gridHtml += '</div>';
+  });
+  document.getElementById('summaryGrid').innerHTML = gridHtml;
+  var overall = totalAnswered > 0 ? (totalScore / totalAnswered).toFixed(1) : '—';
+  document.getElementById('overallScore').textContent = overall;
+}
+
+function resetAll(){
+  if(confirm('Reset all answers? This cannot be undone.')){
+    answers = {};
+    render();
+  }
+}
+
+function exportResults(){
+  var lines = ['963ITAI AI Governance Readiness Assessment Results','','Date: ' + new Date().toLocaleDateString(),''];
+  var qIdx = 0;
+  DATA.forEach(function(domain, di){
+    lines.push('\n=== DOMAIN ' + (di+1) + ': ' + domain.domain.toUpperCase() + ' (' + domain.tag + ') ===\n');
+    domain.questions.forEach(function(q, qi){
+      qIdx++;
+      var key = di + '-' + qi;
+      var score = answers[key] || 'Not answered';
+      var labels = ['Initial','Developing','Defined','Managed','Optimized'];
+      var label = answers[key] ? labels[answers[key]-1] : '';
+      lines.push('Q' + qIdx + '. ' + q.q);
+      lines.push('   Score: ' + score + (label ? ' (' + label + ')' : ''));
+      var notesEl = document.getElementById('notes-' + key);
+      if(notesEl && notesEl.value) lines.push('   Notes: ' + notesEl.value);
+      lines.push('');
+    });
+  });
+  lines.push('\n=== SUMMARY ===\n');
+  DATA.forEach(function(domain, di){
+    var dScore = 0; var dCount = 0;
+    domain.questions.forEach(function(q, qi){
+      var key = di + '-' + qi;
+      if(answers[key]){ dScore += answers[key]; dCount++ }
+    });
+    var avg = dCount > 0 ? (dScore / dCount).toFixed(1) : 'N/A';
+    lines.push(domain.domain + ': ' + avg);
+  });
+  var blob = new Blob([lines.join('\n')], {type: 'text/plain'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = '963ITAI_Assessment_Results_' + new Date().toISOString().slice(0,10) + '.txt';
+  a.click();
+}
+
+render();
+</script>
+
+</body></html>
